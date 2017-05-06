@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆</title>
+<link rel="stylesheet" th:href="@{'/css/bootstrap.min.css'}" />
+<link rel="stylesheet" th:href="@{'/css/signin.css'}" />
+</head>
+<body>
+	<div class="container">
+		<p th:each="test,index : ${testList}" th:text="${test.toString()}"></p>
+	</div>
+</body>
+</html>
