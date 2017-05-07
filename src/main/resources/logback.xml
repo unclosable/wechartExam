@@ -9,8 +9,22 @@
 		</encoder>
 	</appender>
 
-	<root level="DEBUG">
+	<logger name="com.unclosable" level="DEBUG" additivity="false">
+		<springProfile name="development">
+			<appender-ref ref="stdout" />
+		</springProfile>
+	</logger>
+	<logger name="org.springframework" level="INFO" additivity="false">
+		<springProfile name="development">
+			<appender-ref ref="stdout" />
+		</springProfile>
+	</logger>
+	<logger name="org.mybatis" level="DEBUG" additivity="false">
+		<springProfile name="development">
+			<appender-ref ref="stdout" />
+		</springProfile>
+	</logger>
+	<root level="ERROR">
 		<appender-ref ref="stdout" />
 	</root>
-
 </configuration>
