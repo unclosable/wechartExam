@@ -4,13 +4,13 @@
 lock '3.3.5'
 
 
-set :application, 'eureka'
-set :repo_url, 'https://github.com/soarpatriot/eureka.git'
+set :application, 'wechartExam'
+set :repo_url, 'https://github.com/unclosable/wechartExam.git'
 
 set :scm, :git
 
-set :version, "0.1.1"
-set :jar_file, "eureka-#{fetch(:version)}.jar"
+set :version, "0.0.1"
+set :jar_file, "wechartExam-#{fetch(:version)}.jar"
 
 
 # Default value for :format is :pretty
@@ -31,9 +31,9 @@ set :pty, true
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-set :default_env, {
-  path: "/home/deploy/soft/jdk1.8.0_66/bin:$PATH"
-}
+# set :default_env, {
+#   path: "/home/deploy/soft/jdk1.8.0_66/bin:$PATH"
+# }
 
 
 # Default value for keep_releases is 5
