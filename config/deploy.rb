@@ -9,8 +9,8 @@ set :repo_url, 'https://github.com/unclosable/wechartExam.git'
 
 set :scm, :git
 
-set :version, "0.0.1"
-set :jar_file, "wechartExam-#{fetch(:version)}.jar"
+set :version, "0.1.1"
+set :jar_file, "theWechartExam-#{fetch(:version)}.jar"
 
 
 # Default value for :format is :pretty
@@ -32,7 +32,7 @@ set :pty, true
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
  set :default_env, {
-	  'PATH' => 'PATH=/home/work/jdk1.8.0_131/bin:$PATH'
+	  'PATH' => 'PATH=/usr/dev/jdk1.8.0_131/bin:$PATH'
  }
 
 
