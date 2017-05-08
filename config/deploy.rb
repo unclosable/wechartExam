@@ -1,7 +1,7 @@
 # require 'capistrano-daemonize'
 
 # config valid only for current version of Capistrano
-lock '3.3.5'
+#lock '3.3.5'
 
 
 set :application, 'wechartExam'
@@ -31,9 +31,9 @@ set :pty, true
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-# set :default_env, {
-#   path: "/home/deploy/soft/jdk1.8.0_66/bin:$PATH"
-# }
+ set :default_env, {
+	  'PATH' => 'PATH=/home/work/jdk1.8.0_131/bin:$PATH'
+ }
 
 
 # Default value for keep_releases is 5

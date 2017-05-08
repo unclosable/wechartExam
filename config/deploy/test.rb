@@ -10,9 +10,9 @@ set :server_name, "43.241.234.241"
 
 set :branch, "master"
 
-#set :default_env, {
-#  'PATH' => 'PATH=/deploy/soft/jdk1.8.0_66/bin:$PATH'
-#}
+set :default_env, {
+  'PATH' => 'PATH=/home/work/jdk1.8.0_131/bin:$PATH'
+}
 
 server fetch(:server_name), user: 'root', roles: %w{web app}
 
