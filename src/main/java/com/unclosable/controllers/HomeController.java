@@ -1,5 +1,7 @@
 package com.unclosable.controllers;
 
+import java.net.URI;
+
 import javax.annotation.Resource;
 
 import org.apache.commons.logging.Log;
@@ -21,6 +23,11 @@ public class HomeController {
 	@RequestMapping(value = { "/", "" })
 	public String index(Model model) {
 		model.addAttribute("testList", this.testService.getTest());
+
+		URI uri = this.testService.serviceUrl();
+
+		logger.debug(uri.toString());
+
 		return "index";
 	}
 }
