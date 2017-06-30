@@ -1,4 +1,4 @@
-set :stage, :test
+set :stage, :localtest2
 
 set :profile, "localtest2"
 
