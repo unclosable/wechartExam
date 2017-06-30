@@ -11,6 +11,10 @@ spring:
       port: 8500
       discovery:
         enabled: false
+        serviceName: theTestService  
+        healthCheckInterval: 10s  
+        tags: dev
+        
         
   thymeleaf:
     cache: false
@@ -43,7 +47,7 @@ spring:
       host: 10.3.54.210
       port: 8500
       discovery:
-        hostname: localTest1
+        enabled: true
         serviceName: theTestService  
         healthCheckInterval: 10s  
         tags: dev
@@ -64,7 +68,7 @@ spring:
       host: 10.3.54.210
       port: 8500
       discovery:
-        hostname: localTest2
+        enabled: true
         serviceName: theTestService  
         healthCheckInterval: 10s  
         tags: dev
