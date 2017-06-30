@@ -24,7 +24,7 @@ spring:
     cache: false
   pidfile: shared/tmp/pids/application.pid
 server:
-  port: 10002
+  port: 10001
 logging:
   level:
     org.springframework: 'OFF'

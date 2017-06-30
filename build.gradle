@@ -20,6 +20,10 @@ buildscript {
 	ext { springBootVersion = '1.5.1.RELEASE' }
 	repositories {
 		mavenCentral()
+		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+		maven { url 'http://repo2.maven.org/maven2/' }
+		maven { url 'http://maven.net.cn/content/groups/public/' }
+		maven { url 'https://plugins.gradle.org/m2/'}
 		maven { url 'https://plugins.gradle.org/m2/'}
 	}
 	dependencies {

@@ -10,6 +10,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.alibaba.fastjson.JSON;
 import com.unclosable.DO.Test;
@@ -23,9 +24,10 @@ public class TestServiceImpl implements TestService {
 
 	@Resource
 	private TestMapper testMapper;
-
 	@Resource
 	private DiscoveryClient discoveryClient;
+	@Resource
+	private RestTemplate restTemplate;
 
 	@Override
 	public List<Test> getTest() {
@@ -35,12 +37,19 @@ public class TestServiceImpl implements TestService {
 
 	@Override
 	public URI serviceUrl() {
-		List<ServiceInstance> list = discoveryClient.getInstances("test-webService");
+		List<ServiceInstance> list = discoveryClient.getInstances("theTestService");
 		list.forEach(s -> {
-
 			logger.debug("Secure:" + s.isSecure());
 			logger.debug("Host:" + s.getHost());
 			logger.debug("Metadata:" + JSON.toJSONString(s.getMetadata()));
+			logger.debug("URI:" + s.getUri().toString());
+			try {
+				String results = restTemplate.getForObject("http://theTestService", String.class);
+				logger.debug(results);
+
+			} catch (Exception e) {
+				logger.debug("", e);
+			}
 		});
 		if (list != null && list.size() > 0) {
 			return list.get(0).getUri();
