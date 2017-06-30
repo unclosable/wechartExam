@@ -9,15 +9,9 @@ spring:
     consul:
       host: 10.3.54.210
       port: 8500
-#      config:
-#        enabled: true
       discovery:
 #        enabled: true  
-#        instanceId: tomcat1  
         serviceName: theTestService  
-        hostname: 10.3.22.37
-        port: 10001
-        healthCheckUrl: http://10.3.22.37:10001/health
         healthCheckInterval: 10s  
         tags: dev
   thymeleaf:
@@ -40,9 +34,23 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
 ---
 spring:
-  profiles: localtest
+  profiles: localtest1
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
     driverClassName: com.mysql.jdbc.Driver
+
+server:
+  port: 10001
+---
+spring:
+  profiles: localtest2
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+
+server:
+  port: 10002

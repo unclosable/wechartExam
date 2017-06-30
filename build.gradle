@@ -24,7 +24,6 @@ buildscript {
 		maven { url 'http://repo2.maven.org/maven2/' }
 		maven { url 'http://maven.net.cn/content/groups/public/' }
 		maven { url 'https://plugins.gradle.org/m2/'}
-		maven { url 'https://plugins.gradle.org/m2/'}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -87,7 +86,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-all
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-all', version: '1.2.1.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-dependencies', version: '1.2.1.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-consul-dependencies', version: '1.2.1.RELEASE'
 	
 	
 

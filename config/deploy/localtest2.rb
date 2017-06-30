@@ -1,6 +1,6 @@
 set :stage, :test
 
-set :profile, "localtest"
+set :profile, "localtest2"
 
 set :deploy_to, "/home/web-server/WechartExam"
 
