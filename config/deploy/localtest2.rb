@@ -2,9 +2,9 @@ set :stage, :localtest2
 
 set :profile, "localtest2"
 
-set :deploy_to, "/home/web-server/WechartExam"
+set :deploy_to, "/home/web-server/consul-test2"
 
-set :jar_pid, "/home/web-server/WechartExam/pids/application.pid"
+set :jar_pid, "/home/web-server/consul-test2/pids/application.pid"
 
 set :server_name, "10.3.22.43"
 
