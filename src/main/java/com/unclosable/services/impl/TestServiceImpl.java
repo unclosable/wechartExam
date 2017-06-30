@@ -43,16 +43,15 @@ public class TestServiceImpl implements TestService {
 			logger.debug("Host:" + s.getHost());
 			logger.debug("Metadata:" + JSON.toJSONString(s.getMetadata()));
 			logger.debug("URI:" + s.getUri().toString());
-			try {
-				String results = restTemplate.getForObject("http://theTestService", String.class);
-				logger.debug(results);
-
-			} catch (Exception e) {
-				logger.debug("", e);
-			}
 		});
 		if (list != null && list.size() > 0) {
 			return list.get(0).getUri();
+		}
+		try {
+			String results = restTemplate.getForObject("http://theTestService", String.class);
+			logger.debug(results);
+		} catch (Exception e) {
+			logger.debug("", e);
 		}
 		return null;
 	}

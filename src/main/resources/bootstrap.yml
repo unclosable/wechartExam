@@ -10,10 +10,8 @@ spring:
       host: 10.3.54.210
       port: 8500
       discovery:
-#        enabled: true  
-        serviceName: theTestService  
-        healthCheckInterval: 10s  
-        tags: dev
+        enabled: false
+        
   thymeleaf:
     cache: false
   pidfile: shared/tmp/pids/application.pid
@@ -40,6 +38,15 @@ spring:
     username: root
     password: root
     driverClassName: com.mysql.jdbc.Driver
+  cloud:
+    consul:
+      host: 10.3.54.210
+      port: 8500
+      discovery:
+        hostname: localTest1
+        serviceName: theTestService  
+        healthCheckInterval: 10s  
+        tags: dev
 
 server:
   port: 10001
@@ -51,6 +58,16 @@ spring:
     username: root
     password: root
     driverClassName: com.mysql.jdbc.Driver
+
+  cloud:
+    consul:
+      host: 10.3.54.210
+      port: 8500
+      discovery:
+        hostname: localTest2
+        serviceName: theTestService  
+        healthCheckInterval: 10s  
+        tags: dev
 
 server:
   port: 10002
