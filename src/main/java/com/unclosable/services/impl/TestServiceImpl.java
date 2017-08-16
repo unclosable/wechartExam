@@ -46,7 +46,7 @@ public class TestServiceImpl implements TestService {
 		// return list.get(0).getUri();
 		// }
 		try {
-			String results = restTemplate.getForObject("http://theTestService/1dd", String.class, "dddd");
+			String results = restTemplate.getForObject("http://theTestService/fdskfjkldsjflkdslk", String.class, "dddd");
 			logger.debug(results);
 		} catch (Exception e) {
 			logger.debug("", e);
