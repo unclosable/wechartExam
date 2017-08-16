@@ -1,7 +1,6 @@
 package com.unclosable;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +19,6 @@ import com.unclosable.mappers.TestMapper;
 @SpringBootTest(classes = Application.class)
 @WebAppConfiguration
 @ImportResource("classpath:config/applicationContext.xml")
-@Transactional
 public class TestTester {
 	@Resource
 	private TestMapper testMapper;

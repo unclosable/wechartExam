@@ -14,7 +14,7 @@
 			<appender-ref ref="stdout" />
 		</springProfile>
 	</logger>
-	<logger name="org.springframework" level="INFO" additivity="false">
+	<logger name="org.springframework" level="INFO" additivity="true">
 		<springProfile name="development">
 			<appender-ref ref="stdout" />
 		</springProfile>
@@ -24,7 +24,7 @@
 			<appender-ref ref="stdout" />
 		</springProfile>
 	</logger>
-	<root level="ERROR">
+	<root level="DEBUG">
 		<appender-ref ref="stdout" />
 	</root>
 </configuration>

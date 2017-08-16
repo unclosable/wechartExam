@@ -19,12 +19,10 @@ public class HomeController {
 	private TestService testService;
 
 	@RequestMapping(value = { "/", "" })
-	public String index(Model model) {
+	public String index(Model model) throws InterruptedException {
 		model.addAttribute("testList", this.testService.getTest());
-
 		this.testService.serviceUrl();
-
-
+		Thread.sleep(10000L);
 		return "index";
 	}
 }

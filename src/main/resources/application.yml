@@ -1,0 +1,31 @@
+spring:
+  profiles.active: development
+#  datasource:
+#    url: jdbc:mysql://10.3.22.43:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    driverClassName: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+  pidfile: shared/tmp/pids/application.pid
+server:
+  port: 10002
+logging:
+  level:
+    org.springframework: 'OFF'
+    com.xiaojiuwo.models.mapper: DEBUG
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+   
+---
+spring:
+  profiles: localtest1
+  
+---
+spring:
+  profiles: localtest2
+server:
+  port: 10001
+  
