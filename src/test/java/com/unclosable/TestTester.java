@@ -28,7 +28,7 @@ public class TestTester {
 		com.unclosable.DO.Test test = new com.unclosable.DO.Test();
 		test.setContent("test content");
 		test.setTitle("test title");
-		this.testMapper.insert(test);
+		// this.testMapper.insert(test);
 		System.out.println(test.getId());
 	}
 

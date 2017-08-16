@@ -22,7 +22,7 @@ public class HomeController {
 	public String index(Model model) throws InterruptedException {
 		model.addAttribute("testList", this.testService.getTest());
 		this.testService.serviceUrl();
-		Thread.sleep(10000L);
+		Thread.sleep(1000L);
 		return "index";
 	}
 }

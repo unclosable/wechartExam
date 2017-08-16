@@ -9,8 +9,8 @@ set :repo_url, 'https://github.com/unclosable/wechartExam.git'
 
 set :scm, :git
 
-set :version, "0.1.1"
-set :jar_file, "theWechartExam-#{fetch(:version)}.jar"
+set :version, "0.0.1"
+set :jar_file, "theWechartExam-v#{fetch(:version)}.jar"
 
 
 # Default value for :format is :pretty
