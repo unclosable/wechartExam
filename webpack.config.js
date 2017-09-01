@@ -4,7 +4,7 @@ var argv = require('yargs').argv;
 
 // var baseList = [ 'jquery', 'bootstrap/dist/css/bootstrap.min.css',
 // 'bootstrap/dist/js/bootstrap.min.js' ];
-var baseList = [];
+var baseList = ['react','react-dom'];
 
 var isLocalTest = argv.env.action === 'localTest' ? true : false;
 
