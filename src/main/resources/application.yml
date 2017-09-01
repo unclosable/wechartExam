@@ -24,6 +24,12 @@ endpoints:
 spring:
   profiles: test
   
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: IWantMoney@999
+    driverClassName: com.mysql.jdbc.Driver
+
    
 server:
   port: 10002
