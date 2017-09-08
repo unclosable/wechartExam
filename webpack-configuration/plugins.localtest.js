@@ -7,18 +7,18 @@ var path = require('path');
 // return re;
 // }
 
-module.exports = [ new HtmlWebpackPlugin({
-	chunks : [ 'index', ],
-	xhtml : false,
-	inject : true,
-	template : path.resolve(__dirname, "../") + "/src/main/resources/static/temp/index.html",
-	filename : path.resolve(__dirname, "../") + "/src/main/resources/templates/index.html",
+module.exports = [new HtmlWebpackPlugin({
+    chunks: ['index', ],
+    xhtml: false,
+    inject: true,
+    template: path.resolve(__dirname, "../") + "/src/main/resources/static/temp/index.html",
+    filename: path.resolve(__dirname, "../") + "/src/main/resources/templates/index.html",
 }), new webpack.DefinePlugin({
-	'process.env' : {
-		NODE_ENV : JSON.stringify('production')
-	}
-}),new webpack.optimize.UglifyJsPlugin({
+    'process.env': {
+        NODE_ENV: JSON.stringify('production')
+    }
+}), new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
     }
-})];
+}), new webpack.HotModuleReplacementPlugin()];

@@ -1,6 +1,10 @@
 let mainPanel = React.createClass({
     render: function() {
-        return <span>this is a test span</span>;
+        const text = "hhhhhhh";
+        console.log(this.state.Mytext)
+        return (
+            <div className="testDiv">{text}</div>
+        );
     }
 });
 

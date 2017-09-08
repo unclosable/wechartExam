@@ -18,7 +18,7 @@ endpoints:
   shutdown:
     enabled: true
     sensitive: false
-    
+ 
     
 ---
 spring:
