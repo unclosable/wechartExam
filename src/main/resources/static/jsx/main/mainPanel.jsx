@@ -1,18 +1,10 @@
-import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAwesomeReactComponent from '../baseComponent/testComponent.jsx';
 
-class MainPanel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = props;
-  }
+const App = () => (
+  <MuiThemeProvider>
+    <MyAwesomeReactComponent/>
+  </MuiThemeProvider>
+);
 
-  render() {
-    const text = "hhhhhhh";
-    console.log(this.state);
-    return (
-      <div className="testDiv">{this.state.Mytext}</div>
-    );
-  }
-}
-
-export default MainPanel;
+export default App;

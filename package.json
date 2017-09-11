@@ -39,5 +39,8 @@
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.4.5",
     "yargs": "^8.0.1"
+  },
+  "dependencies": {
+    "material-ui": "^0.19.1"
   }
 }
