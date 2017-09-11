@@ -8,21 +8,24 @@ var path = require('path');
 // }
 
 module.exports = [new HtmlWebpackPlugin({
-    chunks: ['index', ],
-    xhtml: false,
-    inject: true,
-    template: path.resolve(__dirname, "../") + "/src/main/resources/static/temp/index.html",
-    filename: path.resolve(__dirname, "../") + "/src/main/resources/templates/index.html",
+  chunks: ['index', ],
+  xhtml: false,
+  inject: true,
+  template: path.resolve(__dirname, "../") + "/src/main/resources/static/temp/index.html",
+  filename: path.resolve(__dirname, "../") + "/src/main/resources/templates/index.html",
 }), new CleanWebpackPlugin(['build'], {
-    root: path.resolve(__dirname, "../") + "/src/main/resources/static/js",
-    verbose: true,
-    dry: false
+  root: path.resolve(__dirname, "../") + "/src/main/resources/static/js",
+  verbose: true,
+  dry: false
 }), new webpack.DefinePlugin({
-	'process.env' : {
-		NODE_ENV : JSON.stringify('production')
-	}
-}),new webpack.optimize.UglifyJsPlugin({
-    compress: {
-        warnings: false
-    }
+  'process.env': {
+    NODE_ENV: JSON.stringify('production')
+  }
+}), new webpack.optimize.UglifyJsPlugin({
+  compress: {
+    warnings: false
+  }
+}), new webpack.ProvidePlugin({
+  React: "react",
+  ReactDOM: "react-dom"
 })];

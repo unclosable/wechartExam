@@ -1,9 +1,8 @@
-let mainPanel = require('./main/mainPanel.jsx');
+import MainPanel from './main/mainPanel.jsx';
 
-let initFunc = function() {
-    console.log(mainPanel);
-    ReactDOM.render(
-        <mainPanel myText="12呃呃vvvvfffdddd呃1ffsdfs呃ddd吗3"/>, document.getElementById('teststtststsPanel'));
+const initFunc = function() {
+  ReactDOM.render(
+    <MainPanel Mytext="hfhfhf"/>, document.getElementById('teststtststsPanel'));
 }
 
-module.exports = initFunc;
+export default initFunc;
