@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.unclosable.services.TestService;
 
 @Controller
-@RequestMapping(value = "/index")
+@RequestMapping(value = "/")
 public class HomeController {
 	protected Log logger = LogFactory.getLog(this.getClass());
 
