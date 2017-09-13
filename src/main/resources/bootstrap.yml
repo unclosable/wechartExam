@@ -10,7 +10,7 @@ spring:
       host: 10.3.54.210
       port: 8500
       discovery:
-        enabled: false
+        enabled: true
         serviceName: theTestService  
         healthCheckInterval: 10s  
         tags: dev
@@ -20,7 +20,7 @@ spring:
     cache: false
   pidfile: shared/tmp/pids/application.pid
 server:
-  port: 10002
+  port: 0
 logging:
   level:
     org.springframework: 'OFF'
@@ -36,42 +36,4 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
 ---
 spring:
-  profiles: localtest1
-  datasource:
-    url: jdbc:mysql://10.3.22.43:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: root
-    driverClassName: com.mysql.jdbc.Driver
-  cloud:
-    consul:
-      host: 10.3.54.210
-      port: 8500
-      discovery:
-        enabled: false
-        serviceName: theTestService  
-        healthCheckInterval: 10s  
-        tags: dev
-
-server:
-  port: 10001
----
-spring:
-  profiles: localtest2
-  datasource:
-    url: jdbc:mysql://10.3.22.43:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: root
-    driverClassName: com.mysql.jdbc.Driver
-
-  cloud:
-    consul:
-      host: 10.3.54.211
-      port: 8500
-      discovery:
-        enabled: true
-        serviceName: theTestService  
-        healthCheckInterval: 10s  
-        tags: dev
-
-server:
-  port: 10002
+  profiles: consulTest

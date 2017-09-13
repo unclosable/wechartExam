@@ -16,11 +16,9 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource("classpath:config/applicationContext.xml")
 public class Application {
     public static void main(String[] args) {
-
         SpringApplication springApplication = new SpringApplication(Application.class);
         springApplication.addListeners(new ApplicationPidFileWriter());
         springApplication.run(args);
-
     }
 
 }
