@@ -1,0 +1,33 @@
+body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#mainDIV{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+#menuDIV.left{
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  overflow-y: auto;
+}
+
+#contentDIV.rigth{
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+}
