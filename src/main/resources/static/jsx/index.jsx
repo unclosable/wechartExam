@@ -3,11 +3,12 @@ import MainMenu from './menu/main.jsx';
 import TestTable from './baseComponent/testTable.jsx';
 import Route from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TodoApp from './test/todo.jsx';
 
 const initFunc = function() {
 
   ReactDOM.render(
-    <MainPanel menu={< MainMenu />}/>, document.body);
+    <MainPanel menu={< TodoApp />}/>, document.body);
 }
 
 export default initFunc;
