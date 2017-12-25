@@ -1,15 +1,15 @@
 package com.unclosable.DO;
 
-import com.alibaba.fastjson.JSON;
+import java.util.Date;
 
-public class Test {
+public class Blog {
     private Integer id;
 
     private String title;
 
-    private String content;
+    private String filePath;
 
-    private Boolean deleted;
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -27,20 +27,20 @@ public class Test {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getContent() {
-        return content;
+    public String getFilePath() {
+        return filePath;
     }
 
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+    public void setFilePath(String filePath) {
+        this.filePath = filePath == null ? null : filePath.trim();
     }
 
-    public Boolean getDeleted() {
-        return deleted;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setDeleted(Boolean deleted) {
-        this.deleted = deleted;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override
@@ -54,11 +54,11 @@ public class Test {
         if (getClass() != that.getClass()) {
             return false;
         }
-        Test other = (Test) that;
+        Blog other = (Blog) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
-            && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
-            && (this.getDeleted() == null ? other.getDeleted() == null : this.getDeleted().equals(other.getDeleted()));
+            && (this.getFilePath() == null ? other.getFilePath() == null : this.getFilePath().equals(other.getFilePath()))
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()));
     }
 
     @Override
@@ -67,13 +67,8 @@ public class Test {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
-        result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
-        result = prime * result + ((getDeleted() == null) ? 0 : getDeleted().hashCode());
+        result = prime * result + ((getFilePath() == null) ? 0 : getFilePath().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return result;
     }
-
-	@Override
-	public String toString() {
-		return JSON.toJSONString(this);
-	}
 }

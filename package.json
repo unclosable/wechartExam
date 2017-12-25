@@ -2,7 +2,9 @@
   "name": "fun-pro",
   "version": "1.0.0",
   "description": "就是个好玩的项目",
+  "main": "./src/main/resources/static/js/index.js",
   "scripts": {
+    "webTest": "./node_modules/.bin/webpack --config webpack.config.js  --env.action=localTest&& ./node_modules/.bin/webpack-dev-server --inline --config webpack.config.js --hot --progress --colors  --env.action=localTest",
     "build": "./node_modules/.bin/webpack --config webpack.config.js --env.action=production",
     "localtest": "./node_modules/.bin/webpack --config webpack.config.js  --env.action=localTest&& ./node_modules/.bin/webpack-dev-server --inline --config webpack.config.js --hot   --env.action=localTest"
   },
@@ -29,6 +31,7 @@
     "postcss-loader": "^1.3.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
