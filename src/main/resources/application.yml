@@ -1,9 +1,9 @@
 spring:
   profiles.active: development
   datasource:
-    url: jdbc:mysql://10.3.22.43:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.1.197:3306/wechartExam?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: root
+    password: GiveME$999
     driverClassName: com.mysql.cj.jdbc.Driver
   thymeleaf:
     cache: false
