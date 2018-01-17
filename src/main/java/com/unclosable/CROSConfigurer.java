@@ -20,9 +20,8 @@ public class CROSConfigurer {
 		return new WebMvcConfigurerAdapter() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("").allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS").allowCredentials(false).maxAge(3600);
+				registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS").allowCredentials(true).maxAge(3600);
 			}
 		};
 	}
-
 }
